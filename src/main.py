@@ -1,8 +1,6 @@
 import time
 from phone_bot import Phone_Bot
 
-
-
 def main():
 	wakeup_msg = "wake up you useless piece of shit"
 	sleep_time = 5  # minutes
