@@ -9,7 +9,6 @@ def main():
 	while (1):
 		bot.make_call(wakeup_msg)
 		time.sleep(sleep_time*60)
-		
 
 
 if __name__ == "__main__":
