@@ -1,0 +1,106 @@
+* {
+	box-sizing: border-box;
+}
+
+select {
+	margin: 0;
+}
+
+html {
+    padding-top:140px;
+}
+
+body {
+    border: 8px solid #ddd26f;
+	border-radius: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 25px;
+    padding-bottom: 50px;
+    width: 50%;
+    height: 380px;
+    margin: 0 auto;
+    background: #2d2d2d;
+}
+
+#main-container {
+	margin: 0;
+}
+
+#clock {
+	/* height:130px; */
+	/* line-height: 0px; */
+	padding-top: 30px;
+    font-size: 75px;
+    font-family: "Arial";
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 	color: rgb(158, 223, 243);
+}
+
+
+h2 {
+	text-align:center;
+}
+
+#alarm-container {
+	padding-top: 0px;
+	padding-bottom: 30px;
+	text-align:center;
+    font-family: Verdana;
+    /* font-size: 1em; */
+  	color: rgb(158, 223, 243);
+}
+
+label {
+	display:inline-block;
+}
+
+.timeofday {
+    background-color: rgb(0, 193, 252);
+}
+
+.bigger {
+    font-weight:bold;
+    font-size: 18px;
+}
+
+#sounds {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#setButton {
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #4CAF50;
+	float: left;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 11px;
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+	cursor: pointer;
+}
+#clearButton {
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background:rgb(207, 47, 47);
+	float: right;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 11px;
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+	cursor: pointer;
+}
+
+
+
+

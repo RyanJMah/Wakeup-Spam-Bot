@@ -1,0 +1,65 @@
+<html lang='en'>
+	<head>
+		<title>Ryan Mah | Alarm Clock</title>
+		<meta charset='UFT-8' name='viewport' content='width=device-width, initial=scale=1.0' >
+		<link rel='stylesheet' type='text/css' href='/static/clock.css'>
+	</head>
+
+	<body>
+
+		<form method="POST">
+
+			<div id='main-container'>
+				<h2 id='clock'></h2>
+			</div>
+
+			<div id='alarm-container'>
+				<h3>Set Alarm Time</h3>
+					<label>
+						<div>
+						<select id='alarmhrs' name="hrs" required></select>
+						</div>
+					</label>
+					<label>
+						<div>
+						<select id='alarmmins' name="mins" required></select>
+						</div>
+					</label>
+					<label>
+						<div>
+						<select id='alarmsecs' name="secs" required></select>
+						</div>
+					</label>
+					<label>
+						<div>
+							<select id="ampm" name="am_pm" required>
+								<option value="AM">AM</option>
+								<option value="PM">PM</option>
+							</select>
+						</div>
+					</label>
+					</div>
+			</div>
+
+			<div id='buttonHolder'>
+				<div>
+					<button id='setButton' name="button" value="set" onClick='alarmSet()' required>
+						Set Alarm
+					</button>
+				</div>
+
+				<div>
+					<button  id='clearButton' name="button" value="clear" onClick='alarmClear()' required>
+						Clear Alarm
+					</button>
+				</div>
+			</div>
+		
+		</form>
+
+
+
+		<script type='text/javascript' src='/static/clock.js'></script>
+	</body>
+
+</html>
