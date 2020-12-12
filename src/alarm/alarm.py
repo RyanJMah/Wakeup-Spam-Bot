@@ -10,7 +10,7 @@ class Alarm_Bot(threading.Thread):
 		threading.Thread.__init__(self)
 		self.__poll_button_thread = threading.Thread(
 			target = self.poll_button_routine,
-			args = (self,)
+			args = (self,),
 			daemon = True
 		)
 		self.running = True
