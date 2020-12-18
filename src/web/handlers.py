@@ -1,13 +1,12 @@
 import os
 import sys
-import db
-import user
+import json
 import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
-
+import db
+import user
 THIS_DIR = os.path.abspath(os.path.dirname(__file__))
 ALARM_DIR = os.path.join(os.path.dirname(THIS_DIR), "alarm")
-
 sys.path.append(ALARM_DIR)
 import alarm
 
@@ -20,32 +19,13 @@ def login_handler(username_in, password_in):
 
 	return None
 
+def upload_alarm_handler(table_list):
+	print(db.query_alarm_db_user("Test1"))
 
-def set_alarm_handler(hour, minute, second, am_pm):
-	def am_pm_to_24h(hour, minute, second, am_pm):
-		if am_pm == "PM":
-			return {"hour": hour + 12, "minute": minute, "second": second}
-		else:
-			return {"hour": hour, "minute": minute, "second": second}
-
-	curr = datetime.datetime.now()
-	curr = datetime.datetime(curr.year, curr.month, curr.day, curr.hour, curr.minute, curr.second)
-	desired = datetime.datetime(
-		year = curr.year,
-		month = curr.month,
-		day = curr.day,
-		**am_pm_to_24h(hour, minute, second, am_pm)
-	)
-
-	if (datetime.datetime.time(desired) < datetime.datetime.time(curr)):
-		desired += datetime.timedelta(days = 1)
-
-	print(desired)
-	alarm.alarm_mainloop(desired)
+	
 
 
-def clear_alarm_handler():
-	pass
+
 
 
 def main():

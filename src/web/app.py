@@ -2,7 +2,7 @@ import os
 import flask
 import flask_login
 import datetime
-
+import functools
 import user
 from routes import app_routes
 
@@ -21,7 +21,6 @@ def app_init(app):
 	@login_manager.user_loader
 	def load_user(user_id):
 		return user.get_user_from_id(user_id)
-
 
 def main():
 	app = flask.Flask(__name__)
